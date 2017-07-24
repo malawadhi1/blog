@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lists</title>
+</head>
+<body>
+
+<h2> List of Posts </h2>
+<h5>Please choose a Post:</h5>
+	
+	<ol>
+	{% for instance in stuff_list %}
+		<a href="{% url 'detail' post_id=instance.id %}"><li> {{instance.title}} </li></a>
+	{% endfor %}
+
+	</ol>
+</body>
+</html>
